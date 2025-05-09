@@ -1,6 +1,3 @@
-Berikut dokumentasi yang bisa kamu pakai untuk file `README.md` di GitHub proyek generator kata sandimu:
-
----
 
 # Password Generator Web App
 
@@ -18,10 +15,7 @@ Generator kata sandi sederhana berbasis web yang memungkinkan pengguna untuk mem
 * Tombol salin ke clipboard
 * Animasi logo interaktif menggunakan Anime.js
 
-## Demo
 
-![Screenshot](screenshot.png)
-*(Tambahkan gambar jika ada)*
 
 ## Teknologi
 
