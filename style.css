@@ -1,0 +1,235 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a7bfe8, #6190e8);
+  color: #333;
+  /* overflow: hidden; */  /* Hapus atau komentar baris ini */
+}
+
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 70%, transparent 70%);
+  animation: backgroundFloat 15s linear infinite;
+}
+
+@keyframes backgroundFloat {
+  0% { transform: translate(0, 0); }
+  50% { transform: translate(50%, 50%); }
+  100% { transform: translate(0, 0); }
+}
+
+.glassmorphism-header,
+.glassmorphism-card,
+.glassmorphism-footer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  margin: 10px;
+}
+
+.glassmorphism-header {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-animation {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-animation svg {
+  width: 100%;
+  height: 100%;
+  fill: #eee; /* Warna ikon */
+}
+
+.header-title {
+  font-size: 2.2em;
+  margin-bottom: 8px;
+  color: #fff; /* Teks putih untuk kontras di header */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-subtitle {
+  font-size: 1em;
+  color: #eee;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+main.password-generator {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.settings {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+  font-weight: bold;
+}
+
+.glassmorphism-input,
+.glassmorphism-select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.glassmorphism-button {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.glassmorphism-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.glassmorphism-button.small {
+  width: auto;
+  padding: 10px 15px;
+  margin-left: 10px;
+}
+
+.password-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#password {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+#password-strength {
+  margin-top: 25px;
+}
+
+.glassmorphism-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glassmorphism-level {
+  height: 100%;
+  width: 0%;
+  background-color: #d9534f; /* Warna default lemah */
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.glassmorphism-text {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+
+.glassmorphism-footer {
+  text-align: center;
+  color: #eee;
+  font-size: 0.9em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .header-title {
+    font-size: 2em;
+  }
+  .header-subtitle {
+    font-size: 0.9em;
+  }
+  .logo-animation {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  main.password-generator {
+    padding: 20px;
+  }
+  .glassmorphism-input,
+  .glassmorphism-select,
+  .glassmorphism-button {
+    font-size: 14px;
+  }
+  #password {
+    font-size: 16px;
+  }
+  #copy {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}

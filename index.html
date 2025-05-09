@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</head>
+<body>
+  <header class="glassmorphism-header">
+    <div class="header-content">
+      <div class="logo-animation" id="logoAnimation">
+        <svg viewBox="0 0 100 100" width="80" height="80">
+          <path d="M10 10 V 90 H 90 V 10 H 10 Z M 30 30 H 70 V 70 H 30 V 30" fill="currentColor" />
+          <circle cx="50" cy="50" r="10" fill="#fff" />
+        </svg>
+      </div>
+      <h1 class="header-title">Secure Password Generator</h1>
+      <p class="header-subtitle">Generate strong, random passwords effortlessly.</p>
+    </div>
+  </header>
+
+  <div class="app-container">
+    <main class="password-generator glassmorphism-card">
+      <h1>Generate Password</h1>
+
+      <div class="settings">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" value="12" min="6" max="20" class="glassmorphism-input">
+
+        <label for="complexity">Complexity:</label>
+        <select id="complexity" class="glassmorphism-select">
+          <option value="1">Low (Letters only)</option>
+          <option value="2">Medium (Letters and Numbers)</option>
+          <option value="3">High (Letters, Numbers, and Symbols)</option>
+        </select>
+      </div>
+
+      <button id="generate" class="glassmorphism-button">Generate Password</button>
+
+      <div class="password-display">
+        <input type="text" id="password" readonly class="glassmorphism-input">
+        <button id="copy" title="Copy to Clipboard" class="glassmorphism-button small">Copy</button>
+      </div>
+
+      <div id="password-strength">
+        <div class="strength-bar glassmorphism-bar">
+          <div id="strength-level" class="glassmorphism-level"></div>
+        </div>
+        <span id="strength-text" class="glassmorphism-text">Strength: Weak</span>
+      </div>
+    </main>
+  </div>
+
+  <footer class="glassmorphism-footer">
+    <p>&copy; 2025 Nama Anda - Password Generator</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
