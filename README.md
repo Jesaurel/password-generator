@@ -40,7 +40,7 @@ Generator kata sandi sederhana berbasis web yang memungkinkan pengguna untuk mem
 1. Clone repositori ini:
 
    bash
-   git clone https://github.com/username/password-generator.git
+   git clone https://github.com/Jesaurel/password-generator.git
    
 2. Buka file `index.html` di browser.
 
